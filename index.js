@@ -11,5 +11,6 @@ server.get('/', (req, res) =>{
 })
 
 server.use(express.json());
-const port = 6000;
+// make port dynamic
+const port = process.env.PORT || 4000;
 server.listen(port, () => console.log(`\n** Running on port ${port}\n`))
